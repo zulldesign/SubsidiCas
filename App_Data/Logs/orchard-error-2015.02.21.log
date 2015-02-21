@@ -1,0 +1,142 @@
+2015-02-21 12:10:24,995 [13] NHibernate.AdoNet.AbstractBatcher - (null) - Could not execute query: select contenttyp0_.Id as Id237_, contenttyp0_.Name as Name237_, contenttyp0_.DisplayName as DisplayN3_237_, contenttyp0_.Hidden as Hidden237_, contenttyp0_.Settings as Settings237_ from orc1_Settings_ContentTypeDefinitionRecord contenttyp0_ where contenttyp0_.Name=@p0
+ (null)
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at SNIReadSyncOverAsync(SNI_ConnWrapper* , SNI_Packet** , Int32 )
+   at SNINativeMethodWrapper.SNIReadSyncOverAsync(SafeHandle pConn, IntPtr& packet, Int32 timeout)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\AdoNet\AbstractBatcher.cs:line 223
+2015-02-21 12:10:26,874 [13] NHibernate.Util.ADOExceptionReporter - (null) - Thread was being aborted.
+ (null)
+2015-02-21 12:10:26,959 [13] NHibernate.Util.ADOExceptionReporter - (null) - Thread was being aborted.
+ (null)
+2015-02-21 12:10:26,962 [13] NHibernate.Util.ADOExceptionReporter - (null) - Thread was being aborted.
+ (null)
+2015-02-21 12:10:27,044 [13] Orchard.Recipes.Services.RecipeStepExecutor - Default - Recipe execution 91cd404389344694ae4b16b71d62dfd7 was cancelled because a step failed to execute
+ http://localhost:23760/
+NHibernate.Exceptions.GenericADOException: could not execute query
+[ select contenttyp0_.Id as Id237_, contenttyp0_.Name as Name237_, contenttyp0_.DisplayName as DisplayN3_237_, contenttyp0_.Hidden as Hidden237_, contenttyp0_.Settings as Settings237_ from orc1_Settings_ContentTypeDefinitionRecord contenttyp0_ where contenttyp0_.Name=@p0 ]
+  Name:p1 - Value:BlogPost
+[SQL: select contenttyp0_.Id as Id237_, contenttyp0_.Name as Name237_, contenttyp0_.DisplayName as DisplayN3_237_, contenttyp0_.Hidden as Hidden237_, contenttyp0_.Settings as Settings237_ from orc1_Settings_ContentTypeDefinitionRecord contenttyp0_ where contenttyp0_.Name=@p0] ---> System.Threading.ThreadAbortException: Thread was being aborted.
+   at SNIReadSyncOverAsync(SNI_ConnWrapper* , SNI_Packet** , Int32 )
+   at SNINativeMethodWrapper.SNIReadSyncOverAsync(SafeHandle pConn, IntPtr& packet, Int32 timeout)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\AdoNet\AbstractBatcher.cs:line 229
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Loader\Loader.cs:line 1224
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Loader\Loader.cs:line 419
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Loader\Loader.cs:line 251
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Loader\Loader.cs:line 1564
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Loader\Loader.cs:line 1571
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Loader\Loader.cs:line 1472
+   at NHibernate.Loader.Loader.List(ISessionImplementor session, QueryParameters queryParameters, ISet`1 querySpaces, IType[] resultTypes) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Loader\Loader.cs:line 1465
+   at NHibernate.Hql.Ast.ANTLR.Loader.QueryLoader.List(ISessionImplementor session, QueryParameters queryParameters) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Hql\Ast\ANTLR\Loader\QueryLoader.cs:line 288
+   at NHibernate.Hql.Ast.ANTLR.QueryTranslatorImpl.List(ISessionImplementor session, QueryParameters queryParameters) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Hql\Ast\ANTLR\QueryTranslatorImpl.cs:line 109
+   at NHibernate.Engine.Query.HQLQueryPlan.PerformList(QueryParameters queryParameters, ISessionImplementor session, IList results) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Engine\Query\HQLQueryPlan.cs:line 89
+   at NHibernate.Impl.SessionImpl.List(IQueryExpression queryExpression, QueryParameters queryParameters, IList results) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 659
+   at NHibernate.Impl.AbstractSessionImpl.List(IQueryExpression queryExpression, QueryParameters parameters) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Impl\AbstractSessionImpl.cs:line 92
+   at NHibernate.Impl.ExpressionQueryImpl.List() in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Impl\ExpressionQueryImpl.cs:line 58
+   at NHibernate.Linq.DefaultQueryProvider.ExecuteQuery(NhLinqExpression nhLinqExpression, IQuery query, NhLinqExpression nhQuery) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Linq\DefaultQueryProvider.cs:line 103
+   at NHibernate.Linq.DefaultQueryProvider.Execute(Expression expression) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Linq\DefaultQueryProvider.cs:line 35
+   at NHibernate.Linq.DefaultQueryProvider.Execute[TResult](Expression expression) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Linq\DefaultQueryProvider.cs:line 40
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Orchard.Core.Settings.Metadata.ContentDefinitionManager.Acquire(ContentTypeDefinition contentTypeDefinition) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard.Web\Core\Settings\Metadata\ContentDefinitionManager.cs:line 163
+   at Orchard.Core.Settings.Metadata.ContentDefinitionManager.StoreTypeDefinition(ContentTypeDefinition contentTypeDefinition) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard.Web\Core\Settings\Metadata\ContentDefinitionManager.cs:line 109
+   at Orchard.ContentManagement.MetaData.ContentDefinitionManagerExtensions.AlterTypeDefinition(IContentDefinitionManager manager, String name, Action`1 alteration) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\ContentManagement\MetaData\IContentDefinitionManager.cs:line 26
+   at Orchard.Recipes.RecipeHandlers.MetadataRecipeHandler.ExecuteRecipeStep(RecipeContext recipeContext)
+   at Orchard.Recipes.Services.RecipeStepExecutor.ExecuteNextStep(String executionId)
+2015-02-21 12:10:28,474 [13] NHibernate.Util.ADOExceptionReporter - Default - While preparing SELECT this_.Id as Id271_2_, this_.Number as Number271_2_, this_.Published as Published271_2_, this_.Latest as Latest271_2_, this_.Data as Data271_2_, this_.ContentItemRecord_id as ContentI6_271_2_, contentite1_.Id as Id270_0_, contentite1_.Data as Data270_0_, contentite1_.ContentType_id as ContentT3_270_0_, contenttyp2_.Id as Id272_1_, contenttyp2_.Name as Name272_1_ FROM orc1_Orchard_Framework_ContentItemVersionRecord this_ inner join orc1_Orchard_Framework_ContentItemRecord contentite1_ on this_.ContentItemRecord_id=contentite1_.Id inner join orc1_Orchard_Framework_ContentTypeRecord contenttyp2_ on contentite1_.ContentType_id=contenttyp2_.Id WHERE contenttyp2_.Name = @p0 and this_.Published = @p1 an error occurred
+ http://localhost:23760/
+2015-02-21 12:10:28,476 [13] NHibernate.Util.ADOExceptionReporter - Default - Prepare requires an open and available Connection. The connection's current state is closed.
+ http://localhost:23760/
+2015-02-21 12:10:28,479 [13] Orchard.Exceptions.DefaultExceptionPolicy - Default - An unexpected exception was caught
+ http://localhost:23760/
+NHibernate.ADOException: While preparing SELECT this_.Id as Id271_2_, this_.Number as Number271_2_, this_.Published as Published271_2_, this_.Latest as Latest271_2_, this_.Data as Data271_2_, this_.ContentItemRecord_id as ContentI6_271_2_, contentite1_.Id as Id270_0_, contentite1_.Data as Data270_0_, contentite1_.ContentType_id as ContentT3_270_0_, contenttyp2_.Id as Id272_1_, contenttyp2_.Name as Name272_1_ FROM orc1_Orchard_Framework_ContentItemVersionRecord this_ inner join orc1_Orchard_Framework_ContentItemRecord contentite1_ on this_.ContentItemRecord_id=contentite1_.Id inner join orc1_Orchard_Framework_ContentTypeRecord contenttyp2_ on contentite1_.ContentType_id=contenttyp2_.Id WHERE contenttyp2_.Name = @p0 and this_.Published = @p1 an error occurred ---> System.InvalidOperationException: Prepare requires an open and available Connection. The connection's current state is closed.
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.Prepare()
+   at NHibernate.Driver.DriverBase.PrepareCommand(IDbCommand command) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Driver\DriverBase.cs:line 281
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\AdoNet\AbstractBatcher.cs:line 109
+   --- End of inner exception stack trace ---
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\AdoNet\AbstractBatcher.cs:line 117
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\AdoNet\AbstractBatcher.cs:line 216
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Loader\Loader.cs:line 1224
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Loader\Loader.cs:line 419
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Loader\Loader.cs:line 251
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Loader\Loader.cs:line 1569
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Loader\Loader.cs:line 1472
+   at NHibernate.Loader.Loader.List(ISessionImplementor session, QueryParameters queryParameters, ISet`1 querySpaces, IType[] resultTypes) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Loader\Loader.cs:line 1465
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 1975
+   at NHibernate.Impl.CriteriaImpl.List(IList results) in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Impl\CriteriaImpl.cs:line 265
+   at NHibernate.Impl.CriteriaImpl.List[T]() in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Impl\CriteriaImpl.cs:line 276
+   at Orchard.ContentManagement.DefaultContentQuery.Slice(Int32 skip, Int32 count) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\ContentManagement\DefaultContentQuery.cs:line 161
+   at Orchard.ContentManagement.DefaultContentQuery.ContentQuery`1.Orchard.ContentManagement.IContentQuery<T>.List() in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\ContentManagement\DefaultContentQuery.cs:line 262
+   at Orchard.Core.Settings.Services.SiteService.<GetSiteSettings>b__0(AcquireContext`1 ctx) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard.Web\Core\Settings\Services\SiteService.cs:line 28
+   at Orchard.Caching.Cache`2.CreateEntry(TKey k, Func`2 acquire) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\Caching\Cache.cs:line 57
+   at Orchard.Caching.Cache`2.<>c__DisplayClass2.<Get>b__0(TKey k) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\Caching\Cache.cs:line 19
+   at System.Collections.Concurrent.ConcurrentDictionary`2.AddOrUpdate(TKey key, Func`2 addValueFactory, Func`3 updateValueFactory)
+   at Orchard.Caching.Cache`2.Get(TKey key, Func`2 acquire) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\Caching\Cache.cs:line 17
+   at Orchard.Caching.DefaultCacheManager.Get[TKey,TResult](TKey key, Func`2 acquire) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\Caching\DefaultCacheManager.cs:line 33
+   at Orchard.Core.Settings.Services.SiteService.GetSiteSettings() in z:\Builds\work\d1eb156ccc3cb14\src\Orchard.Web\Core\Settings\Services\SiteService.cs:line 27
+   at Orchard.Settings.CurrentSiteWorkContext.Get[T](String name) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\Settings\CurrentSiteWorkContext.cs:line 13
+   at Orchard.Environment.WorkContextImplementation.<>c__DisplayClass7`1.<FindResolverForState>b__2(IWorkContextStateProvider wcsp) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\Environment\WorkContextImplementation.cs:line 32
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Orchard.Environment.WorkContextImplementation.FindResolverForState[T](String name) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\Environment\WorkContextImplementation.cs:line 32
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.WorkContextImplementation.GetState[T](String name) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\Environment\WorkContextImplementation.cs:line 27
+   at Orchard.WorkContext.get_CurrentSite() in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\WorkContext.cs:line 50
+   at Orchard.Localization.Services.SiteCultureSelector.GetCulture(HttpContextBase context) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\Localization\Services\SiteCultureSelector.cs:line 13
+   at Orchard.Localization.Services.DefaultCultureManager.<>c__DisplayClassa.<GetCurrentCulture>b__5(ICultureSelector x) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\Localization\Services\DefaultCultureManager.cs:line 60
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.OrderedEnumerable`1.<GetEnumerator>d__0.MoveNext()
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)
+   at Orchard.Localization.Services.DefaultCultureManager.GetCurrentCulture(HttpContextBase requestContext) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\Localization\Services\DefaultCultureManager.cs:line 64
+   at Orchard.Localization.Services.CurrentCultureWorkContext.<Get>b__0[T](WorkContext ctx) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\Localization\Services\CurrentCultureWorkContext.cs:line 13
+   at Orchard.Environment.WorkContextImplementation.<>c__DisplayClass7`1.<FindResolverForState>b__5() in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\Environment\WorkContextImplementation.cs:line 37
+   at Orchard.Environment.WorkContextImplementation.GetState[T](String name) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\Environment\WorkContextImplementation.cs:line 28
+   at Orchard.WorkContext.get_CurrentCulture() in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\WorkContext.cs:line 74
+   at Orchard.Localization.Text.Get(String textHint, Object[] args) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\Localization\Text.cs:line 28
+   at Orchard.Recipes.Services.RecipeStepExecutor.ExecuteNextStep(String executionId)
+   at Orchard.Recipes.Services.RecipeScheduler.ExecuteWork(String executionId)
+   at Orchard.Events.DelegateHelper.<>c__DisplayClass2b`2.<BuildAction>b__2a(Object target, Object[] p) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\Events\DelegateHelper.cs:line 116
+   at Orchard.Events.DefaultOrchardEventBus.TryInvokeMethod(IEventHandler eventHandler, Type interfaceType, String messageName, String interfaceName, String methodName, IDictionary`2 arguments, IEnumerable& returnValue) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\Events\DefaultOrchardEventBus.cs:line 80
+   at Orchard.Events.DefaultOrchardEventBus.TryNotifyHandler(IEventHandler eventHandler, String messageName, String interfaceName, String methodName, IDictionary`2 eventData, IEnumerable& returnValue) in z:\Builds\work\d1eb156ccc3cb14\src\Orchard\Events\DefaultOrchardEventBus.cs:line 53
+2015-02-21 12:10:29,183 [13] NHibernate.Util.ADOExceptionReporter - Default - While preparing select rolerecord0_.Id as Id257_, rolerecord0_.Name as Name257_ from orc1_Orchard_Roles_RoleRecord rolerecord0_ where rolerecord0_.Name=@p0 an error occurred
+ http://localhost:23760/
+2015-02-21 12:10:29,186 [13] NHibernate.Util.ADOExceptionReporter - Default - Prepare requires an open and available Connection. The connection's current state is closed.
+ http://localhost:23760/
+2015-02-21 12:10:29,297 [13] NHibernate.Transaction.AdoTransaction - Default - Rollback failed
+ http://localhost:23760/
+System.InvalidOperationException: Invalid operation. The connection is closed.
+   at System.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at System.Data.SqlClient.SqlInternalTransaction.Rollback()
+   at System.Data.SqlClient.SqlTransaction.Rollback()
+   at NHibernate.Transaction.AdoTransaction.Rollback() in c:\Users\sebros\Documents\My Projects\nhibernate-core\src\NHibernate\Transaction\AdoTransaction.cs:line 249
+2015-02-21 12:10:29,347 [13] Orchard.Data.SessionLocator - Default - 
